@@ -2,6 +2,7 @@
 ### Add Ignore files
 washington.csv
 chicago.csv
+new-yourk-city.csv
 ### Date created
 Include the date you created this project and README file.
 
