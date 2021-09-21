@@ -1,5 +1,5 @@
 import time
-import pandas as pd
+import pandas as PD
 import numpy as np
 
 CITY_DATA = { 'chicago': 'chicago.csv',
@@ -63,13 +63,14 @@ def load_data(city, month, day):
         df - Pandas DataFrame containing city data filtered by month and day
     """
 
-    df = pd.read_csv(CITY_DATA[city])
+    df = PD.read_csv(CITY_DATA[city])
     
-    df["Start Time"] = pd.to_datetime(df["Start Time"])
+    df["Start Time"] = PD.to_datetime(df["Start Time"])
     
     
     df["month"] = df["Start Time"].dt.month
     
+
     if month != "all":
         month = months.index(month) + 1
         df = df[df["month"] == month ] 
